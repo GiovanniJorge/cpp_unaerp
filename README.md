@@ -1,87 +1,199 @@
-# C++ - Unaerp
+# C++ Unaerp
 
-Exercícios em linguagem C++ usados nas aulas da Unaerp — coleção organizada por tópicos (programação orientada a objetos, templates, manipulação de arquivos, strings, funções e exercícios gerais). Ideal para estudantes que querem aprimorar suas habilidades em C++ moderno.
-
-## Conteúdo principal
-- Exercícios focados em problemas didáticos para aprendizagem de C++.
-- Estrutura simples por pastas que separa exercícios por tema.
-- Exemplos que demonstram conceitos fundamentais e avançados de C++.
-- Uso de boas práticas e padrões de codificação modernos.
-
-## Badges
-![Licença](https://img.shields.io/github/license/GiovanniJorge/cpp-unaerp?style=flat-square)
-![Exercícios](https://img.shields.io/badge/quantidade-18%20exercícios-blue?style=flat-square)
+<p align="center">
+  <img alt="C++" src="https://img.shields.io/badge/C%2B%2B-17%2F20-00599C?logo=c%2B%2B&logoColor=white" />
+  <img alt="status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen" />
+  <img alt="licença" src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue" />
+</p>
 
 ## Sumário
-- [Visão geral](#visão-geral)
-- [Estrutura do repositório](#estrutura-do-repositório)
-- [Como compilar e executar](#como-compilar-e-executar)
-- [Contribuindo](#contribuindo)
+
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Arquitetura e Estrutura do Repositório](#arquitetura-e-estrutura-do-repositório)
+- [Como Executar Localmente](#como-executar-localmente)
+- [Uso e Exemplos](#uso-e-exemplos)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Contribuição](#contribuição)
+- [Autor](#autor)
 - [Licença](#licença)
-- [Autor / Contato](#autor--contato)
 
-## Visão geral
-Este repositório organiza pequenos programas em C++ que exemplificam conceitos de linguagem e resolução de problemas. Cada arquivo fonte normalmente resolve um exercício específico e está escrito para fins educacionais, focando em clareza, boas práticas pedagógicas e aprendizado de C++ moderno.
+## Descrição do Projeto
 
-## Estrutura do repositório
-Top-level:
+Este repositório reúne exercícios em linguagem C++ desenvolvidos para fins acadêmicos e didáticos, com foco em fundamentos da programação, lógica de algoritmos, estruturas de controle, funções, arrays e resolução de problemas práticos.
+
+Cada arquivo representa um exercício ou mini-programa independente, pensado para facilitar o estudo e a prática da linguagem em ambiente universitário. O objetivo principal é oferecer uma base sólida em C++ por meio de exemplos claros, objetivos e executáveis.
+
+## Arquitetura e Estrutura do Repositório
+
+A organização do projeto é simples e direta, priorizando clareza e didática sobre complexidade arquitetural:
+
 ```text
-├── .gitattributes
-├── .gitignore
+cpp-unaerp/
 ├── LICENSE
 ├── README.md
-└── exercicios-geral/         # Exercícios diversos e fundamentos (.cpp)
-    ├── elipse.cpp
+├── .gitignore
+├── .gitattributes
+└── exercicios-geral/
+    ├── analise-de-vendas-semanais.cpp
     ├── aprovacao-aluno.cpp
-    └── ...                   # Outros subprojetos e tópicos divididos por temas
+    ├── controle-de-estoque.cpp
+    ├── conversao-de-temperaturas.cpp
+    ├── despesas-mensais.cpp
+    ├── elipse.cpp
+    ├── imagem-em-tons-de-cinza.cpp
+    ├── notas-de-aluno.cpp
+    ├── pesquisa-de-satisfacao.cpp
+    ├── programacao-celsius.cpp
+    ├── programacao-cubo.cpp
+    ├── programacao-pitagoras.cpp
+    ├── switch-case.cpp
+    ├── tabela-de-estoque.cpp
+    ├── temperatura-de-cidades.cpp
+    ├── tipo-de-triangulo.cpp
+    ├── triangulos.cpp
+    └── valores-suavisados.cpp
 ```
 
-### Como se encaixa:
-- O repositório abriga uma variedade de exercícios independentes criados ao longo do curso.
-- Cada arquivo `.cpp` é um programa autônomo. A forma usual de usar o repositório é navegar até o diretório correspondente e compilar o arquivo específico que você deseja estudar ou executar.
+### Como o projeto funciona
 
-## Como compilar e executar
+- Cada arquivo `.cpp` é um programa independente;
+- Não há backend, banco de dados ou infraestrutura externa;
+- O código é compilado e executado de forma isolada;
+- O fluxo principal é: escolher o exercício → compilar → executar → aprender a lógica.
 
-Recomenda-se usar `g++` ou `clang++` (compiladores compatíveis com os padrões modernos de C++). Exemplos:
+## Como Executar Localmente
 
-### Compilar um exercício único (Padrão C++17):
+### Pré-requisitos
+
+Antes de compilar os programas, certifique-se de ter instalado:
+
+- Um compilador C++ moderno, como `g++` ou `clang++`;
+- Terminal de linha de comando;
+- `git` para clonar o repositório.
+
+Verifique a instalação:
+
 ```bash
-g++ -std=c++17 -Wall -Wextra -pedantic -O2 -g exercicios-geral/elipse.cpp -o elipse
+g++ --version
+```
+
+ou
+
+```bash
+clang++ --version
+```
+
+### Clonando o repositório
+
+```bash
+git clone https://github.com/GiovanniJorge/cpp-unaerp.git
+cd cpp-unaerp
+```
+
+### Compilando um exercício específico
+
+Exemplo com `g++`:
+
+```bash
+g++ -std=c++17 -Wall -Wextra -pedantic exercicios-geral/elipse.cpp -o elipse
 ./elipse
 ```
 
-### Compilar com suporte a C++20:
+Também é possível compilar outros exercícios da mesma forma:
+
 ```bash
-g++ -std=c++20 -Wall -Wextra -pedantic exercicios-geral/aprovacao-aluno.cpp -o aprovacao-aluno
+g++ -std=c++17 -Wall -Wextra -pedantic exercicios-geral/aprovacao-aluno.cpp -o aprovacao-aluno
 ./aprovacao-aluno
 ```
 
-### Compilar todos os .cpp em uma pasta (Rápido para testes locais):
+### Compilando todos os exercícios da pasta
+
 ```bash
-# Dentro da pasta correspondente
-g++ -std=c++17 -Wall -Wextra *.cpp -o exercicios
+cd exercicios-geral
+g++ -std=c++17 -Wall -Wextra -pedantic *.cpp -o exercicios
 ./exercicios
 ```
 
-### Usando Clang++ como alternativa:
+> Observação: a prática mais comum no estudo de exercícios em C++ é compilar um arquivo por vez para entender cada problema isoladamente.
+
+## Uso e Exemplos
+
+Após compilar, basta executar o binário gerado. Os exemplos desse repositório servem para:
+
+- praticar lógica de programação;
+- testar estruturas de controle;
+- aprender entrada e saída em C++;
+- estudar resolução de problemas acadêmicos.
+
+### Exemplo prático
+
 ```bash
-clang++ -std=c++17 -Wall -Wextra -pedantic exercicios-geral/elipse.cpp -o elipse
-./elipse
+g++ -std=c++17 -Wall -Wextra -pedantic exercicios-geral/temperatura-de-cidades.cpp -o temperatura-de-cidades
+./temperatura-de-cidades
 ```
 
-> **Dica de Compilação:** As flags `-Wall -Wextra -pedantic` são altamente recomendadas no ambiente universitário pois forçam o compilador a apontar avisos estritos e desvios de padrões ISO. Para depuração com ferramentas como GDB, mantenha a flag `-g` ativa.
+Esse padrão pode ser repetido para qualquer outro arquivo da pasta `exercicios-geral`.
 
-## Contribuindo
-Contribuições são bem-vistas! Se deseja adicionar uma nova resolução de exercício ou propor melhorias nas estruturas de templates e POO, siga os passos abaixo:
+## Troubleshooting / FAQ
 
-1. Faça um **Fork** do repositório.
-2. Crie uma branch com nome descritivo: `feature/exercicio-nome` ou `fix/readme`.
-3. Faça commits atômicos com mensagens claras e objetivas.
-4. Abra um **Pull Request** detalhando as alterações implementadas e seu contexto didático.
+### 1. O comando `g++` não é reconhecido
+Isso indica que o compilador C++ não está instalado ou não está disponível no `PATH`.
+
+Solução:
+
+```bash
+sudo apt update
+sudo apt install g++
+```
+
+No Windows, uma opção é instalar MinGW ou MSYS2 e adicionar o compilador ao ambiente.
+
+### 2. Erro ao compilar com `-std=c++17`
+Se o compilador for antigo, pode ocorrer incompatibilidade de versão.
+
+Solução:
+
+- Atualize o compilador;
+- Verifique a versão com `g++ --version`;
+- Use uma ferramenta atualizada.
+
+### 3. Arquivo não encontrado
+Esse erro geralmente acontece quando o caminho do arquivo está incorreto.
+
+Solução:
+
+```bash
+g++ -std=c++17 -Wall -Wextra -pedantic exercicios-geral/nome-do-arquivo.cpp -o nome-do-arquivo
+```
+
+### 4. O programa compila, mas não executa como esperado
+Isso pode acontecer por lógica do algoritmo, entrada incorreta ou erro na implementação.
+
+Solução:
+
+- revise o código do programa;
+- verifique a entrada solicitada;
+- teste com valores simples e conhecidos.
+
+## Contribuição
+
+Contribuições são bem-vindas. Se você quiser adicionar novos exercícios, melhorar a organização, corrigir erros ou reforçar a qualidade didática do material, siga os passos abaixo:
+
+1. Faça um fork do repositório;
+2. Crie uma branch com nome descritivo:
+
+```bash
+git checkout -b feature/nova-atividade
+```
+
+3. Faça commits claros e objetivos;
+4. Abra um Pull Request descrevendo as alterações e o contexto da melhoria.
+
+## Autor
+
+- Nome: Giovanni Jorge
+- GitHub: [@GiovanniJorge](https://github.com/GiovanniJorge)
 
 ## Licença
-Este repositório utiliza a licença MIT — consulte o arquivo [LICENSE](LICENSE) na raiz.
 
-## Autor / Contato
-- **Autor:** Giovanni Jorge  
-- **Repositório:** [https://github.com/GiovanniJorge/cpp-unaerp](https://github.com/GiovanniJorge/cpp-unaerp)
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) na raiz do repositório para mais detalhes.
